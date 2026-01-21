@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vansh Choudhary — Internship Portfolio</title>
+  <style>
+    :root{
+      --bg:#f6fbff; --card:#ffffff; --accent:#0b6cff; --muted:#556070; --text:#0b1b2b;
+      --radius:12px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{margin:0;background:linear-gradient(180deg,#eef6ff 0%,var(--bg) 100%);color:var(--text);line-height:1.5}
+    .wrap{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;gap:20px;align-items:center}
+    .photo{width:140px;height:140px;border-radius:12px;overflow:hidden;flex:0 0 140px;border:2px solid rgba(11,108,255,0.12)}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .intro h1{margin:0;font-size:1.6rem}
+    .intro p{margin:6px 0;color:var(--muted)}
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);margin-top:18px;box-shadow:0 8px 30px rgba(11,108,255,0.06)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .skills ul{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:8px 0;list-style:none}
+    .skills li{background:rgba(11,108,255,0.08);padding:8px 10px;border-radius:8px;color:var(--accent);font-weight:700;font-size:0.95rem}
+    .projects .proj{border-left:4px solid var(--accent);padding:12px;margin:12px 0;border-radius:8px;background:linear-gradient(180deg, rgba(11,108,255,0.02), transparent)}
+    .meta{color:var(--muted);font-size:0.95rem}
+    footer{margin-top:22px;color:var(--muted);font-size:0.9rem;text-align:center}
+    a{color:var(--accent);text-decoration:none}
+    .label{font-weight:700;color:#0b1b2b}
+    @media(max-width:880px){.grid{grid-template-columns:1fr;}.photo{width:110px;height:110px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="photo">
+        <!-- Place your photo at assets/photo.jpg in the repo -->
+        <img src="assets/photo.jpg" alt="Vansh Choudhary">
+      </div>
+      <div class="intro">
+        <h1><strong>Vansh Choudhary</strong></h1>
+        <p class="meta">Electrical and Computer Engineering • 4th Semester • Seeking internships in AI and IoT</p>
+        <p class="meta"><span class="label">Email</span> <a href="mailto:your.email@example.com">your.email@example.com</a> • <span class="label">GitHub</span> <a href="https://github.com/your-username">your-username</a></p>
+      </div>
+    </header>
+
+    <div class="card grid">
+      <main>
+        <section class="about">
+          <h2>About</h2>
+          <p class="meta">I completed my intermediate at Famita Convent Sr. Sec. School. I am passionate about technology and science, and I enjoy learning how systems work. I have hands-on experience in C, C++, Python, and Java, and I am focused on building practical projects in AI and IoT.</p>
+        </section>
+
+        <hr style="border:none;height:12px">
+
+        <section class="projects">
+          <h2>Selected Projects</h2>
+
+          <div class="proj">
+            <strong>Embedded Sensor Logger</strong>
+            <div class="meta">Microcontroller-based data logger implemented in C/C++</div>
+            <p>Designed sensor interfacing, data acquisition, and storage. Repo: <a href="https://github.com/your-username/project1">github.com/your-username/project1</a></p>
+          </div>
+
+          <div class="proj">
+            <strong>IoT Home Monitor</strong>
+            <div class="meta">Prototype using MQTT and a Python backend for remote monitoring</div>
+            <p>Built device-to-cloud pipeline and dashboard; focused on reliability and low-power operation. Repo: <a href="https://github.com/your-username/project2">github.com/your-username/project2</a></p>
+          </div>
+
+          <div class="proj">
+            <strong>ML Experimentation Notebook</strong>
+            <div class="meta">Python experiments exploring basic ML models and preprocessing</div>
+            <p>Implemented data cleaning, feature engineering, and baseline models. Repo: <a href="https://github.com/your-username/project3">github.com/your-username/project3</a></p>
+          </div>
+
+        </section>
+
+        <hr style="border:none;height:12px">
+
+        <section class="contact">
+          <h2>Contact</h2>
+          <p class="meta">Open to internships in AI, Machine Learning, Embedded Systems, and IoT. I respond quickly to messages on GitHub and email.</p>
+          <p><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/your-profile">your-profile</a></p>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card">
+          <h3>Skills</h3>
+          <div class="skills">
+            <ul>
+              <li>C</li><li>C++</li><li>Python</li><li>Java</li><li>Embedded Systems</li><li>Microcontrollers</li><li>IoT Protocols</li>
+            </ul>
+          </div>
+
+          <h3>Technical Specifications</h3>
+          <p class="meta"><strong>Programming</strong> Clean C/C++ for embedded; Python for scripting and ML; Java for OOP projects.</p>
+          <p class="meta"><strong>Embedded</strong> MCU programming, sensor interfacing, serial comms, power-aware design.</p>
+          <p class="meta"><strong>IoT</strong> Device-to-cloud patterns, MQTT, lightweight data pipelines, basic dashboarding.</p>
+          <p class="meta"><strong>AI</strong> Familiarity with ML workflows, data preprocessing, model evaluation; eager to learn frameworks.</p>
+
+          <h3>Education</h3>
+          <p class="meta"><strong>Intermediate</strong> Famita Convent Sr. Sec. School</p>
+
+          <h3>Interests</h3>
+          <p class="meta">AI; IoT; reading novels; learning from people and projects</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="meta">Designed for internship applications • Replace placeholders with your real links and project details</div>
+    </footer>
+  </div>
+</body>
+</html>
