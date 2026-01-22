@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vansh Choudhary - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Vansh Choudhary</h1>
+    <p>Electrical & Computer Engineering Student | Programming Enthusiast</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#interests">Interests</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a 4th semester Electrical and Computer Engineering student passionate about programming and technology.
+      Skilled in C, C++, Python, and Java, with a strong foundation in computer science concepts.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Programming: C, C++, Python, Java</li>
+      <li>Database Management: SQL</li>
+    </ul>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Intermediate: Fatima Convent Senior Secondary School</li>
+      <li>B.Tech in Electrical & Computer Engineering: ABES Engineering College</li>
+    </ul>
+  </section>
+
+  <!-- Interests Section -->
+  <section id="interests">
+    <h2>Interests</h2>
+    <p>AI, IoT, and Neural Networks</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <!-- Database Project -->
+    <div id="database-project">
+      <h3>Student Records Database</h3>
+      <p>This project demonstrates basic SQL/DBMS concepts like insert, update, and query.</p>
+      
+      <table border="1" id="studentTable">
+        <tr><th>Roll No</th><th>Name</th><th>Marks</th></tr>
+        <tr><td>101</td><td>Vansh</td><td>85</td></tr>
+        <tr><td>102</td><td>Aditi</td><td>90</td></tr>
+      </table>
+
+      <button onclick="addStudent()">Insert Record</button>
+      <button onclick="updateMarks()">Update Marks</button>
+
+      <script>
+        function addStudent() {
+          let table = document.getElementById("studentTable");
+          let row = table.insertRow();
+          row.insertCell(0).innerHTML = "103";
+          row.insertCell(1).innerHTML = "Rahul";
+          row.insertCell(2).innerHTML = "78";
+        }
+
+        function updateMarks() {
+          let table = document.getElementById("studentTable");
+          table.rows[1].cells[2].innerHTML = "95"; // Update Vansh's marks
+        }
+      </script>
+    </div>
+
+    <!-- Calculator Project -->
+    <div id="calculator-project">
+      <h3>Simple Calculator</h3>
+      <p>A basic coding project performing arithmetic operations.</p>
+      
+      <input type="number" id="num1" placeholder="Enter first number">
+      <input type="number" id="num2" placeholder="Enter second number">
+      
+      <select id="operation">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+      </select>
+      
+      <button onclick="calculate()">Calculate</button>
+      
+      <p>Result: <span id="result"></span></p>
+      
+      <script>
+        function calculate() {
+          let n1 = parseFloat(document.getElementById("num1").value);
+          let n2 = parseFloat(document.getElementById("num2").value);
+          let op = document.getElementById("operation").value;
+          let res;
+          
+          if(op === "add") res = n1 + n2;
+          else if(op === "sub") res = n1 - n2;
+          else if(op === "mul") res = n1 * n2;
+          else if(op === "div") res = n2 !== 0 ? n1 / n2 : "Error (Divide by 0)";
+          
+          document.getElementById("result").innerText = res;
+        }
+      </script>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a href="resume.pdf" download>Download My Resume</a></p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:vanshch1006@gmail.com">vanshch1006@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/vansh-choudhary">Vansh Choudhary</a></p>
+    <p>GitHub: <a href="https://github.com/vanshch1006-rgb">github.com/vanshch1006-rgb</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Vansh Choudhary</p>
+  </footer>
+</body>
+</html>
